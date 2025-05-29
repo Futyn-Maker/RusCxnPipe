@@ -17,9 +17,7 @@ def main():
         print(f"  - Pattern: {construction['pattern']}")
         print(f"    Span: '{construction['span']['span_string']}'")
         print(
-            f"    Position: {
-                construction['span']['span_start']}-{
-                construction['span']['span_end']}")
+            f"    Position: {construction['span']['span_start']}-{construction['span']['span_end']}")
 
     # Process multiple texts
     texts = [

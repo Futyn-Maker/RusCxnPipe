@@ -254,8 +254,7 @@ class SpanPredictor:
             return []
 
         logger.info(
-            f"Predicting spans for {
-                len(examples_with_patterns)} examples")
+            f"Predicting spans for {len(examples_with_patterns)} examples")
 
         # Count total patterns
         total_patterns = sum(len(item['patterns'])
@@ -276,8 +275,7 @@ class SpanPredictor:
         predictions, _ = self.model.predict(qa_input)
         predict_time = time.time() - predict_start
         logger.info(
-            f"Span predictions completed in {
-                predict_time:.2f} seconds")
+            f"Span predictions completed in {predict_time:.2f} seconds")
 
         # Parse predictions back to original format
         logger.info("Processing prediction results...")

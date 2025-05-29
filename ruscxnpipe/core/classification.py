@@ -51,8 +51,7 @@ class ConstructionClassifier:
         self._tokenizer = None
 
         logger.info(
-            f"Initialized ConstructionClassifier with model: {
-                self.model_name}")
+            f"Initialized ConstructionClassifier with model: {self.model_name}")
         logger.info(f"Using device: {self.device}")
 
     @property
@@ -69,8 +68,7 @@ class ConstructionClassifier:
             self._model.eval()
             load_time = time.time() - start_time
             logger.info(
-                f"Classification model loaded in {
-                    load_time:.2f} seconds")
+                f"Classification model loaded in {load_time:.2f} seconds")
         return self._model
 
     @property

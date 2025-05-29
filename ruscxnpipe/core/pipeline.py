@@ -122,8 +122,7 @@ class RusCxnPipe:
             return []
 
         logger.info(
-            f"Processing {
-                len(examples)} examples through complete pipeline")
+            f"Processing {len(examples)} examples through complete pipeline")
 
         # Step 1: Semantic search to find candidates
         logger.info("Step 1: Finding candidates with semantic search...")
@@ -153,8 +152,7 @@ class RusCxnPipe:
         )
         classification_time = time.time() - classification_start
         logger.info(
-            f"Classification completed in {
-                classification_time:.2f} seconds")
+            f"Classification completed in {classification_time:.2f} seconds")
 
         # Step 3: Filter only positive classifications and prepare for span
         # prediction
@@ -188,8 +186,7 @@ class RusCxnPipe:
 
         # Step 4: Span prediction
         logger.info(
-            f"Step 4: Predicting spans for {
-                len(span_input)} examples with positive candidates...")
+            f"Step 4: Predicting spans for {len(span_input)} examples with positive candidates...")
         span_start = time.time()
 
         if span_input:
@@ -239,8 +236,7 @@ class RusCxnPipe:
 
         logger.info(f"Pipeline completed in {total_time:.2f} seconds")
         logger.info(
-            f"Found {total_constructions} constructions in {examples_with_constructions}/{
-                len(examples)} examples")
+            f"Found {total_constructions} constructions in {examples_with_constructions}/{len(examples)} examples")
 
         return final_results
 

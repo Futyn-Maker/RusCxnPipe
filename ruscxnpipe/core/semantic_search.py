@@ -63,8 +63,7 @@ class SemanticSearch:
         self._default_patterns = load_constructicon_patterns()
 
         logger.info(
-            f"Initialized SemanticSearch with model: {
-                self.model_name}")
+            f"Initialized SemanticSearch with model: {self.model_name}")
 
     def _get_default_cache_dir(self) -> Path:
         """Get default cache directory in user's home."""
@@ -86,8 +85,7 @@ class SemanticSearch:
                 with open(self.cache_file, 'rb') as f:
                     cache = pickle.load(f)
                 logger.info(
-                    f"Loaded embedding cache with {
-                        len(cache)} entries")
+                    f"Loaded embedding cache with {len(cache)} entries")
                 return cache
             except Exception as e:
                 logger.warning(f"Failed to load cache: {e}")
@@ -207,9 +205,7 @@ class SemanticSearch:
             validate_custom_patterns(patterns)
 
         logger.info(
-            f"Processing {
-                len(queries)} queries against {
-                len(patterns)} patterns")
+            f"Processing {len(queries)} queries against {len(patterns)} patterns")
 
         # Get pattern embeddings
         pattern_embeddings, pattern_texts = self._get_pattern_embeddings(
