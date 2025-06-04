@@ -8,7 +8,7 @@ def main():
     
     # Process single text
     text = "Что вам здесь нужно?"
-    result = pipe.process_text([text])
+    result = pipe.process_text(text)
     
     print(f"Text: {result['example']}")
     print(f"Found {len(result['constructions'])} constructions:")
