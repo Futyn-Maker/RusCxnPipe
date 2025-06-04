@@ -61,7 +61,7 @@ from ruscxnpipe import RusCxnPipe
 pipe = RusCxnPipe()
 
 # Process text
-result = pipe.process_text(["Что вам здесь нужно?"])
+result = pipe.process_text("Что вам здесь нужно?")
 
 print(f"Found {len(result['constructions'])} constructions:")
 for construction in result['constructions']:
